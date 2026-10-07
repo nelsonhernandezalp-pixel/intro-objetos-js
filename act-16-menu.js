@@ -84,3 +84,21 @@ console.log(actualizar("No-extiste", {precio:1}));
 console.log("----- Eliminar(logico) --------")
 console.log(eliminar(creado.id).disponible);
 console.log("disponibles ahora", listarDisponibles().length);
+
+
+console.log("------ CalcularTotal----")
+const pedido = {
+    folio:"PR-0341",
+    items:[
+        {nombre:"Molletes", precio:30, cantidad:2},
+        {nombre:"Jugo", precio:18, cantidad:1 }
+    ]
+};
+
+console.log(calcularTotal(pedido));
+
+console.log("-----existe nombre----")
+console.log(existeNombre("gelatina"), existeNombre ("pizza"));
+
+console.log("------- Buscar por texto-----")
+console.log(BuscarPorTexto("ju").map((p) => p.nombre));
